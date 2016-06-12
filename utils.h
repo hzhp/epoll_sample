@@ -14,7 +14,7 @@
 
 int setnonblocking(int sockfd)
 {
-    CHK(fcntl(sockfd, F_SETFL, fcntl(sockfd, F_GETFD, 0)|O_NONBLOCK));
+    CHK(fcntl(sockfd, F_SETFL, fcntl(sockfd, F_GETFD, 0)|O_NONBLOCK));  // 获得／设置文件描述符标记(cmd=F_GETFD或F_SETFD);  获得／设置文件状态标记(cmd=F_GETFL或F_SETFL). 
     return 0;
 }
 
